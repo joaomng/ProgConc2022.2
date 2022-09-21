@@ -1,8 +1,8 @@
 # ProgConc2022.2
 Repositório para os laboratórios de programação concorrente de 2022.2 na UFRJ
-## LAB2
+## LAB3
 
-O código nesta seção do repositório gera e multiplica matrizes, com tomada de tempo de execução.
+O código nesta seção do repositório gera matrizes, e as multiplica de forma concorrente, com tomada de tempo de execução.
 Para compilar o arquivo geraMatrizBinario.c:
 gcc -o geraMatriz geraMatrizBinario.c 
 
@@ -15,16 +15,17 @@ E “arquivodesaida” é o nome desejado para o arquivo de saída, necessariame
 
 Para executar no windows basta remover o “./”
 
-Para compilar o arquivo multiplicaSeq.c:
-gcc -o multiplicaSeq multiplicaSeq.c
+Para compilar o arquivo multiplicaConc.c:
+gcc -o multiplicaConc multiplicaConc.c -pthread
 Nota: para compilar no windows é necessário, no arquivo, “timer.h”, trocar o “#include <sys/time.h>” por “#include <time.h>” 
 
 Para executar:
 (no Linux)
-./multiplicaSeq matriz1.bin matriz2.bin arquivodesaida.bin
+./multiplicaConc matriz1.bin matriz2.bin arquivodesaida.bin nthreads
 Onde “matriz1” é o nome do arquivo que contém a primeira matriz;
 “matriz2” é o nome do arquivo que contém a segunda matriz;
-E “arquivodesaida” é o nome desejado para o arquivo de saída onde será escrito o resultado de matriz1*matriz2, necessariamente um arquivo binário.
+“arquivodesaida” é o nome desejado para o arquivo de saída onde será escrito o resultado de matriz1*matriz2, necessariamente um arquivo binário;
+E nthreads é um inteiro, o número de threads desejado na execução
 
 Ao executar, será exibido na tela o tempo de execução para cada segmento do programa (inicialização, processamento e finalização)
 

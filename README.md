@@ -1,6 +1,14 @@
 # ProgConc2022.2
 Repositório para os laboratórios de programação concorrente de 2022.2 na UFRJ
 ## Lab5
+Para compilar:
+gcc -o lab5 lab5.c -lpthread
+
+Para executar (no Linux):
+./lab5.exe
+
+Para executar no windows basta remover o ./
+
 O arquivo lab5.c imprime, com uma implementação concorrente, as frases:<br>
 1:"Seja bem-vindo!"<br>
 2:"Sente-se por favor." <br>
